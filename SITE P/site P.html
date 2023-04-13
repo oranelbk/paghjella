@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>La Paghjella</title>
+  <style>
+    /* Styles pour le design */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    p:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .animated {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .animated.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>La Paghjella</h1>
+    <p class="animated">Dans le patrimoine socio-culturel de la Corse, le chant occupe une place très particulière.
+      Il est présent au quotidien, dans toutes les étapes de la vie, pour chaque occasion, qu’elle soit du
+      registre profane ou bien sacré.</p>
+    <p class="animated">A paghjella, du mot ‘paghju’ (paire) est un chant polyphonique traditionnel porté, dans sa forme la
+      plus répandue, par 3 personnes, chacune en charge d’un type de voix spécifique :</p>
+      <p class="animated">• A seconda : Porte la ligne mélodique principale ; </p>
+      <p class="animated">• U bassu : Porte le socle des graves en soutien ;</p>
+      <p class="animated">• A terza : Porte les notes aigues et les ornementations.</p>
+    <p class="animated">Elles créent le chant dans un ordre précis et ont chacune un rôle déterminé.
+      A seconda entame le chant, puis u bassu le rejoint afin de lui apporter un socle dans le registre des
+      graves, ce qui participe à élargir l’espace sonore. Enfin, a terza les rejoint pour apporter une
+      dimensions supplémentaire en étant dans les aigus, en élargissant encore l’espace sonore et surtout
+      en créant des lignes beaucoup plus libres, qui peuvent échapper momentanément aux deux voix
+      initiales.</p>
+    <p class="animated">La paghjella au sens strict est un chant profane et non sacré, court (souvent moins de deux minutes),
+      dont les textes sont tirés de la vie quotidienne de l'époque où ils ont été créés. Néanmoins le mode
+      polyphonique était utilisé dans beaucoup de cantiques ainsi le Kyrie eleison de la messe. Le terme
+      paghjella englobe désormais une tradition profane et sacrée de chant.</p>
+    <p class="animated">La transmission de la culture Corse est avant tout orale. La poésie se chantait, vibrait au rythme du
+      cœur des hommes. On chante a cappella bien sûr, comme pour faire résonner l'écho venu de l'âme.
+      En Corse, tout est prétexte à confier ses tourments et ses bonheurs à une mélodie. A paghjella
+      accorde plus d'importance à la voix qu'aux paroles. En général les paghjelle sont des chants âpres,
+      rugueux et violents, soutenus par des voix puissantes. Elles témoignent d’une extrême
+      symbioseentre les chanteurs qui laissent une place importante à l'improvisation : un chanteur ne
+      chante jamais une paghjella de la même manière qu'un autre.</p>
+  </div>
+
+  <script>
+    // Animation des paragraphes au chargement de la page
+    let animated = document.querySelectorAll('.animated');
+
+    function animate() {
+      animated.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('show');
+        }
+      })
+    }
+
+    window.addEventListener('load', animate);
+    window.addEventListener('scroll', animate);
+  </script>
+  
+</body>
+</html>
+
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte de la Corse</title>
+  <style>
+    /* Styles pour le design */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    #map {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 0px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    #map-image {
+      top: 0px ;
+      display: block;
+			margin: auto;
+    }
+    
+    .marker1 {
+  position: absolute;
+  bottom: 565px;
+  left: 59%;
+  transform: translateX(-5px);
+  cursor: pointer;
+  background-color: #f00;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
+}
+.marker2 {
+  position: absolute;
+  bottom: 321px;
+  left: 41%;
+  transform: translateX(-5px);
+  cursor: pointer;
+  background-color: #f00;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
+}
+.marker3 {
+  position: absolute;
+  bottom: 433px;
+  left: 51%;
+  transform: translateX(-5px);
+  cursor: pointer;
+  background-color: #f00;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
+}
+    .marker1:hover {
+      transform: scale(1.5);
+    }
+    .marker2:hover {
+      transform: scale(1.5);
+    }
+    .marker3:hover {
+      transform: scale(1.5);
+    }
+    #text-container {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease-in-out;
+    }
+    .marker1.marker1:hover + #text-container {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .marker2:hover + #text-container {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .marker3:hover + #text-container {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="map">
+    <h1>Lieux clé des paghjella en Corse</h1>
+    <img src="Corse-carte-prefectures.png" alt="Carte de la Corse" id="map-image">
+    <div class="marker1" data-x="500" data-y="500"></div>
+    <div id="text-container">
+      <h2>Bastia</h2>
+      <p>Actions de transmission aux scolaires (2015-2017)
+        Dans l’académie de Corse, l’association Cantu in pagjella est intervenue dans des classes bilingues corse-français 
+        de quatre collèges (Camille-Borossi à Vico, Simon-Vinciguerra à Bastia, Henri-Tomasi à Folelli et Philippe-Prescetti 
+        à Cervioni) et deux lycées (Balagne à L’Île-Rousse et Laetizia-Bonaparte à Ajaccio), avec six chanteurs aguerris : 
+        Petru Guelfucci, Jean-François Giammarchi, Jean-Marc Bertrand, Jean-Luc Geronimi, Petru-Santu Guelfucci et Mathieu Maestrini.</p>
+    </div>
+    <div class="marker2" data-x="500" data-y="500"></div>
+    <div id="text-container">
+      <h2>Ajaccio</h2>
+      <p>Des formations adhérentes de l’association Cantu in pagjella ont aidée dans l’organisation des ateliers de transmission du chant,
+         telles que la Scola di cantu natale Lucciani, qui a effectué un travail remarquable dans le ressort de la ville d’Ajaccio.</p>
+    </div>
+    <div class="marker3" data-x="500" data-y="500"></div>
+    <div id="text-container">
+      <h2>Corte</h2>
+      <p>Le 28 juin 2017, l’université de Corse à Corte,  sur le thème « Cantu in paghjella : 
+        le sens de la recherche », a posé les bases d’un dialogue interactif entre chercheurs en musicologie et interprètes
+         et relancé la dynamique initiée par l’inscription sur la Liste de sauvegarde urgente.</p>
+    </div>
+  </div>
+  
+  <script>
+    // Récupération des marqueurs et du conteneur de texte
+    const markers = document.querySelectorAll('.marker');
+    const textContainer = document.getElementById('text-container');
+    
+    // Fonction pour afficher le conteneur de texte
+    function showTextContainer(marker) {
+      const x = marker.dataset.x;
+      const y = marker.dataset.y;
+      textContainer.style.left = `${x}px`;
+      textContainer.style.top = `${y}px`;
+      textContainer.style.opacity = 1;
+      textContainer.style.pointerEvents = 'auto';
+    }
+    
+    // Fonction pour masquer le conteneur de texte
+    function hideTextContainer() 
+      textContainer.style.opacity = 0;
+      textContainer.style.pointerEvents; 
